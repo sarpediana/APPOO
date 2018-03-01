@@ -31,7 +31,7 @@ abstract class BankAccount {
     abstract addMoney(quantity: number);
 }
 
-class Transaction extends BankAccount {
+class Default extends BankAccount {
     constructor(nr, posesorCard, balance) {
         super(nr, posesorCard, balance);
     }
@@ -59,7 +59,7 @@ class Economy extends BankAccount {
 
 let economy = new Economy('9999 9999 9999 9999', 'DIANA SARPE', 0);
 economy.addMoney(2.5);
-let transaction = new Transaction ('9 9 9 9 9 9 ', 'me me ', 0)
+let transaction = new Default ('9 9 9 9 9 9 ', 'me me ', 0)
 transaction.addMoney(3546546);
 console.log(economy.getCountTrasaction(), economy);
 console.log(transaction.getCountTrasaction(), transaction);
